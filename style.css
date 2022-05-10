@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg: #d9e6f6;
+  --button-login: #2e7bb4;
+  --footer-home: #bbcde8;
+  --bg-white: #fff;
+  --bg-login: #f1f9fe;
+  --text-color-pink: #d81d99;
+  --text-color-black: #333;
+  --text-color-gray: #5a5a5a;
+  --input-border: #c5c6ca;
+  --text-white: #fff;
+  --text-links: #2e7bb4;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg);
+  width: 100vw;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  flex-direction: column;
+  width: 111rem;
+  height: auto;
+}
+
+/* MAIN LOGO */
+
+.home {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.welcome {
+  background: var(--bg-white);
+  border-radius: 0.8rem;
+  width: 73.9rem;
+  height: 36.8rem;
+}
+
+section .logo {
+  padding: 8.9rem 22rem 2rem 22rem;
+}
+
+section .description {
+  color: var(--text-color-black);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+section .description p + p {
+  margin-top: 0.5rem;
+}
+
+section .description span {
+  color: var(--text-color-pink);
+  font-weight: bold;
+}
+
+/* LOGIN */
+
+.login {
+  background: var(--bg-login);
+  width: 35.9rem;
+  height: 36.8rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login figure img {
+  padding: 1.4rem 11.5rem 2.4rem;
+}
+
+.login p {
+  color: var(--text-color-gray);
+  max-width: 17.4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.login p span {
+  font-weight: 700;
+}
+
+form input {
+  border-radius: 0.8rem;
+  border: 1px solid var(--input-border);
+  width: 20.9rem;
+  height: 3.2rem;
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.login button {
+  background: var(--button-login);
+  width: 20.9rem;
+  height: 3.2rem;
+  border-radius: 0.8rem;
+  border: none;
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  align-items: center;
+  background: var(--footer-home);
+  width: 100%;
+  margin-top: 1.6rem;
+  border-radius: 0.8rem;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding-block: 0.6rem;
+}
+footer p {
+  padding-right: 0.5rem;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+footer li::before {
+  content: "-";
+  padding: 0.5rem;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: var(--text-links);
+}
