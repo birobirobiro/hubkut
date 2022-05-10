@@ -18,7 +18,9 @@
 
 ## 🚀 Tecnologias
 
-Decidiremos em live
+- HTML
+- CSS
+- JavaScript
 
 ## 🚧 Projeto
 

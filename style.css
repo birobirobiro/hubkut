@@ -132,6 +132,11 @@ form input {
   color: var(--text-white);
   font-weight: 700;
   font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.login button:hover {
+  filter: brightness(0.9);
 }
 
 /* FOOTER */
@@ -165,4 +170,8 @@ footer li::before {
 footer ul a {
   text-decoration: none;
   color: var(--text-links);
+}
+
+footer ul a:hover {
+  filter: brightness(0.7);
 }
