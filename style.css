@@ -9,6 +9,7 @@
 
   --bg: #d9e6f6;
   --button-login: #2e7bb4;
+  --button-login-hover: #1e6296;
   --footer-home: #bbcde8;
   --bg-white: #fff;
   --bg-login: #f1f9fe;
@@ -133,10 +134,11 @@ form input {
   font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all ease 0.3s;
 }
 
 .login button:hover {
-  filter: brightness(0.9);
+  background: var(--button-login-hover);
 }
 
 /* FOOTER */
