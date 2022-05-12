@@ -27,7 +27,7 @@
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
@@ -130,7 +130,6 @@ form input {
   height: 3.2rem;
   border-radius: 0.8rem;
   border: none;
-  color: var(--text-white);
   font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
@@ -139,6 +138,11 @@ form input {
 
 .login button:hover {
   background: var(--button-login-hover);
+}
+
+.login button a {
+  color: var(--text-white);
+  text-decoration: none;
 }
 
 /* FOOTER */

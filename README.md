@@ -28,7 +28,7 @@ Live Preview: https://hubkut.vercel.app/
 
 ## 🎨 Layout:
 
-Figma: https://www.figma.com/file/jIrSKGZ6goFUOaUUpeGCvy/Hubkut?node-id=58%3A1
+Figma: https://www.figma.com/community/file/1105860543512658494
 
 ## :memo: Licença
 

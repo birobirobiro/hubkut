@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg: #d9e6f6;
+  --bg-header: #5c9ecf;
+  --bg-home-sections: #fff;
+  --text-bio: #2e7bb4;
+  --text-menu: #fff;
+  --line-menu: #5292c1;
+  --input-search: #5579a1;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+
+  font-size: 1.6rem;
+}
+
+.container-login {
+  max-width: 111rem;
+  height: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+header {
+  display: flex;
+  background-color: var(--bg-header);
+  padding: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-login {
+  background: var(--bg-home-sections);
+  width: 8.8rem;
+  height: 3.4rem;
+  border-radius: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2.4rem;
+}
+.logo-login img {
+  width: 6.8rem;
+  height: 2.5rem;
+}
+
+nav {
+  display: flex;
+  max-width: 80%;
+  height: 6.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 1.6rem;
+}
+
+header li + li::before {
+  content: "";
+  border-left: 2px solid var(--line-menu);
+  padding-right: 1.6rem;
+}
+
+header ul a {
+  text-decoration: none;
+  color: var(--text-menu);
+  font-size: 1.2rem;
+}
+
+header a:hover {
+  text-shadow: 0 0 0.2rem var(--text-menu);
+}
+
+.logout {
+  margin-left: 1.6rem;
+}
+
+.logout a {
+  text-decoration: none;
+  color: var(--text-menu);
+  font-size: 1.2rem;
+}
+
+.logout a::before {
+  content: "";
+  border-left: 2px solid var(--line-menu);
+  margin: 0 1.6rem 0 3.4rem;
+}
+
+form input {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 3.4rem;
+  background: var(--input-search) url(../assets/home/magnifying-glass.svg)
+    no-repeat scroll 0.8rem 0.9rem;
+  padding-left: 30px;
+  padding: 1rem 3rem;
+  margin-left: 2.4rem;
+  color: var(--text-menu);
+  outline: none;
+}
+
+form input::placeholder {
+  color: var(--text-menu);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
