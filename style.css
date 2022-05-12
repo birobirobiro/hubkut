@@ -143,6 +143,8 @@ form input {
 .login button a {
   color: var(--text-white);
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 /* FOOTER */
