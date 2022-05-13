@@ -134,17 +134,11 @@ form input {
   font-size: 1.2rem;
   cursor: pointer;
   transition: all ease 0.3s;
+  color: var(--text-white);
 }
 
 .login button:hover {
   background: var(--button-login-hover);
-}
-
-.login button a {
-  color: var(--text-white);
-  text-decoration: none;
-  display: inline-block;
-  width: 100%;
 }
 
 /* FOOTER */

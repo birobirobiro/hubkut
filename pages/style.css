@@ -77,20 +77,20 @@ header ul {
   gap: 1.6rem;
 }
 
-header li + li::before {
-  content: "";
-  border-left: 2px solid var(--line-menu);
-  padding-right: 1.6rem;
-}
-
 header ul a {
   text-decoration: none;
   color: var(--text-menu);
   font-size: 1.2rem;
 }
 
-header a:hover {
-  text-shadow: 0 0 0.2rem var(--text-menu);
+header ul a:hover {
+  font-weight: bold;
+}
+
+header li + li::before {
+  content: "";
+  border-left: 2px solid var(--line-menu);
+  padding-right: 1.6rem;
 }
 
 .logout {
