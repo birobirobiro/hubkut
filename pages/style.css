@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-size: 62.5%;
+  font-size: 70%;
 
   --bg: #d9e6f6;
   --bg-header: #5c9ecf;
@@ -14,14 +14,19 @@
   --text-menu: #fff;
   --line-menu: #5292c1;
   --input-search: #5579a1;
+  --aside-line: ##ecf2fa;
+  --text-bio-description: #999;
+  --text-count-infos: #5a5a5a;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
   font-family: "Rubik", sans-serif;
-
-  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  background: var(--bg);
+  align-items: center;
 }
 
 .container-login {
@@ -41,11 +46,18 @@ body {
 }
 
 header {
+  width: 100%;
   display: flex;
   background-color: var(--bg-header);
   padding: 0.4rem;
   align-items: center;
   justify-content: center;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  width: 111rem;
 }
 
 .logo-login {
@@ -65,32 +77,36 @@ header {
 
 nav {
   display: flex;
-  max-width: 80%;
   height: 6.8rem;
   align-items: center;
   justify-content: space-between;
 }
 
 header ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 11rem);
   list-style: none;
-  gap: 1.6rem;
 }
 
 header ul a {
   text-decoration: none;
   color: var(--text-menu);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 header ul a:hover {
   font-weight: bold;
 }
 
+header li {
+  display: flex;
+  justify-content: center;
+}
+
 header li + li::before {
   content: "";
-  border-left: 2px solid var(--line-menu);
-  padding-right: 1.6rem;
+  border-left: 0.25rem solid var(--line-menu);
+  margin-right: 2rem;
 }
 
 .logout {
@@ -100,13 +116,17 @@ header li + li::before {
 .logout a {
   text-decoration: none;
   color: var(--text-menu);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.logout a:hover {
+  font-weight: bold;
 }
 
 .logout a::before {
   content: "";
-  border-left: 2px solid var(--line-menu);
-  margin: 0 1.6rem 0 3.4rem;
+  border-left: 0.25rem solid var(--line-menu);
+  margin-right: 2rem;
 }
 
 form input {
@@ -128,8 +148,201 @@ form input::placeholder {
 }
 
 main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding-top: 2.4rem;
+  width: 100%;
+}
+
+.container-main {
+  display: flex;
+  align-items: center;
+  width: 111rem;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 54.5rem;
+  background: var(--bg-home-sections);
+  border-radius: 0.8rem;
+  justify-content: start;
+}
+
+aside > div + div::after {
+  content: "";
+  border-bottom: 0.2rem solid gray;
+  display: block;
+  opacity: 0.5;
+}
+
+aside > div:nth-child(2)::before {
+  content: "";
+  border-bottom: 0.2rem solid gray;
+  display: block;
+  opacity: 0.5;
+}
+
+aside > div:last-child::after {
+  content: "";
+  border-bottom: none;
+  display: block;
+}
+
+div .img-profile {
+  padding: 1.5rem;
+}
+
+.img-profile img {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+}
+
+div .info-bio {
+  width: 90%;
+  text-align: start;
+}
+
+div .info-bio h3 {
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-bio);
+}
+
+div .info-bio p {
+  padding-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--text-bio-description);
+}
+
+div .social-media,
+div .orgs {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  width: 90%;
+}
+
+div .social-media a,
+div .orgs a {
+  text-decoration: none;
+  color: var(--text-bio);
+}
+
+.social-media div,
+.orgs div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  gap: 0.5rem;
+}
+
+div .social-media svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Custom Colors SVGs */
+
+div .building svg {
+  fill: #333333;
+}
+
+div .map svg {
+  fill: rgb(178, 16, 16);
+}
+
+div .email svg {
+  fill: rgb(52, 52, 52);
+}
+
+div .url svg {
+  fill: rgb(65, 39, 211);
+}
+
+div .twitter svg {
+  fill: #1da1f2;
+}
+
+.main-middle {
+  padding: 0 2.4rem 0 2.4rem;
+}
+
+/* SECTION WELCOME */
+.welcome {
+  background: var(--bg-home-sections);
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+}
+.welcome h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  padding-bottom: 3rem;
+}
+
+.welcome > p {
+  font-size: 1.2rem;
+  color: var(--text-bio-description);
+}
+
+.welcome > p span {
+  font-weight: 700;
+}
+
+.count-infos {
+  display: flex;
+  padding-top: 3rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.count-infos .img {
+  display: flex;
+  align-items: center;
+}
+
+div .img {
+  display: flex;
+  align-items: center;
+}
+
+.repos p,
+.stars p,
+.followers p,
+.following p {
+  font-size: 1.2rem;
+  padding: 0.3rem 0 0.5rem 0;
+  color: var(--text-count-infos);
+}
+
+/* SECTION FOLLOWING / FOLLOWERS */
+
+.info-following,
+.info-followers {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-following ul,
+.list-followers ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-following li,
+.list-followers li {
+  list-style: none;
+}
+
+.list-following img,
+.list-followers img {
+  width: 8.4rem;
+  height: 10.2rem;
+  border-radius: 0.8rem;
 }
